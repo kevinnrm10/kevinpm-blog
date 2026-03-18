@@ -51,7 +51,7 @@ const posts = (await getCollection('blog')).sort(
 
         return (
           <article class="group">
-            <a href={`/blog/${post.slug}/`} class="block">
+            <a href={`${import.meta.env.BASE_URL}blog/${post.slug}/`} class="block">
               <div class="space-y-3">
                 <div class="flex items-center gap-3 text-sm text-gray-600">
                   <time datetime={post.data.pubDate.toISOString()}>

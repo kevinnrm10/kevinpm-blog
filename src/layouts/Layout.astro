@@ -17,7 +17,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href={`${import.meta.env.BASE_URL}favicon.svg`} />
     <meta name="generator" content={Astro.generator} />
     
     <!-- SEO -->
@@ -39,20 +39,18 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     <meta property="twitter:description" content={description} />
     <meta property="twitter:image" content={new URL(image, Astro.url)} />
     
-    <!-- RSS -->
-    <link rel="alternate" type="application/rss+xml" title="Kevin PM - RSS Feed" href="/rss.xml" />
   </head>
   <body class="min-h-screen flex flex-col">
     <!-- Header -->
     <header class="border-b border-gray-200 bg-white/80 backdrop-blur-sm sticky top-0 z-50">
       <nav class="max-w-4xl mx-auto px-6 py-6 flex items-center justify-between">
-        <a href="/" class="text-2xl font-bold tracking-tight hover:text-blue-600 transition-colors">
+        <a href={import.meta.env.BASE_URL} class="text-2xl font-bold tracking-tight hover:text-blue-600 transition-colors">
           Kevin<span class="text-blue-600">PM</span>
         </a>
         <div class="flex gap-8 items-center">
-          <a href="/" class="text-gray-600 hover:text-gray-900 transition-colors font-medium">Blog</a>
-          <a href="/about" class="text-gray-600 hover:text-gray-900 transition-colors font-medium">Sobre mí</a>
-          <a href="https://www.linkedin.com/in/kevinnrm10/" target="_blank" rel="noopener" 
+          <a href={import.meta.env.BASE_URL} class="text-gray-600 hover:text-gray-900 transition-colors font-medium">Blog</a>
+          <a href={`${import.meta.env.BASE_URL}about`} class="text-gray-600 hover:text-gray-900 transition-colors font-medium">Sobre mí</a>
+          <a href="https://www.linkedin.com/in/kevinriosmerino/" target="_blank" rel="noopener"
              class="text-blue-600 hover:text-blue-800 transition-colors font-medium">
             LinkedIn →
           </a>
@@ -70,19 +68,16 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
       <div class="max-w-4xl mx-auto px-6 py-12">
         <div class="flex flex-col md:flex-row justify-between items-center gap-4">
           <p class="text-gray-600 text-sm">
-            © {new Date().getFullYear()} Kevin Andreu. Product Manager @ Housfy.
+            © {new Date().getFullYear()} Kevin Ríos. Product Manager.
           </p>
           <div class="flex gap-6">
-            <a href="https://www.linkedin.com/in/kevinnrm10/" target="_blank" rel="noopener"
+            <a href="https://www.linkedin.com/in/kevinriosmerino/" target="_blank" rel="noopener"
                class="text-gray-600 hover:text-blue-600 transition-colors text-sm">
               LinkedIn
             </a>
             <a href="https://github.com/kevinnrm10" target="_blank" rel="noopener"
                class="text-gray-600 hover:text-blue-600 transition-colors text-sm">
               GitHub
-            </a>
-            <a href="/rss.xml" class="text-gray-600 hover:text-blue-600 transition-colors text-sm">
-              RSS
             </a>
           </div>
         </div>
