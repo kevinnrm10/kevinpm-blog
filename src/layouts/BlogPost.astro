@@ -1,0 +1,75 @@
+---
+import Layout from './Layout.astro';
+
+interface Props {
+  title: string;
+  description: string;
+  pubDate: Date;
+  readingTime?: string;
+  tags?: string[];
+}
+
+const { title, description, pubDate, readingTime = '5 min', tags = [] } = Astro.props;
+
+const formattedDate = new Intl.DateTimeFormat('es-ES', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric'
+}).format(pubDate);
+---
+
+<Layout title={`${title} | Kevin PM`} description={description}>
+  <article class="max-w-3xl mx-auto px-6 py-16">
+    <!-- Header -->
+    <header class="mb-12">
+      <div class="flex items-center gap-4 text-sm text-gray-600 mb-6">
+        <time datetime={pubDate.toISOString()}>
+          {formattedDate}
+        </time>
+        <span>·</span>
+        <span>{readingTime} lectura</span>
+      </div>
+      
+      <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6 leading-tight">
+        {title}
+      </h1>
+      
+      <p class="text-xl text-gray-600 leading-relaxed">
+        {description}
+      </p>
+
+      {tags.length > 0 && (
+        <div class="flex flex-wrap gap-2 mt-6">
+          {tags.map((tag) => (
+            <span class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-sm font-medium">
+              {tag}
+            </span>
+          ))}
+        </div>
+      )}
+    </header>
+
+    <!-- Content -->
+    <div class="prose prose-lg prose-slate max-w-none">
+      <slot />
+    </div>
+
+    <!-- Footer CTA -->
+    <div class="mt-16 pt-8 border-t border-gray-200">
+      <div class="bg-gradient-to-r from-blue-50 to-purple-50 rounded-2xl p-8">
+        <h3 class="text-2xl font-bold mb-4">¿Te ha resultado útil?</h3>
+        <p class="text-gray-700 mb-6">
+          Comparte este artículo en LinkedIn o sígueme para más contenido sobre producto, IA y automatización.
+        </p>
+        <a 
+          href="https://www.linkedin.com/in/kevinnrm10/" 
+          target="_blank" 
+          rel="noopener"
+          class="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 transition-colors"
+        >
+          Sígueme en LinkedIn →
+        </a>
+      </div>
+    </div>
+  </article>
+</Layout>

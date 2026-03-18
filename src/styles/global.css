@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+  
+  body {
+    @apply bg-white text-gray-900 antialiased;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+
+  /* Typography refinements */
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-semibold tracking-tight;
+  }
+
+  h1 {
+    @apply text-4xl md:text-5xl lg:text-6xl;
+  }
+
+  h2 {
+    @apply text-3xl md:text-4xl lg:text-5xl;
+  }
+
+  h3 {
+    @apply text-2xl md:text-3xl;
+  }
+
+  /* Article content styling */
+  article {
+    @apply prose prose-lg prose-slate max-w-none;
+  }
+
+  article h2 {
+    @apply mt-12 mb-4 text-3xl font-bold tracking-tight;
+  }
+
+  article h3 {
+    @apply mt-8 mb-3 text-2xl font-semibold;
+  }
+
+  article p {
+    @apply my-6 leading-relaxed text-gray-700;
+  }
+
+  article ul, article ol {
+    @apply my-6 space-y-2;
+  }
+
+  article li {
+    @apply leading-relaxed;
+  }
+
+  article strong {
+    @apply font-semibold text-gray-900;
+  }
+
+  article em {
+    @apply italic;
+  }
+
+  article code {
+    @apply px-1.5 py-0.5 rounded bg-gray-100 text-sm font-mono text-blue-600;
+  }
+
+  article pre {
+    @apply my-6 p-4 rounded-lg overflow-x-auto;
+  }
+
+  article pre code {
+    @apply p-0 bg-transparent text-inherit;
+  }
+
+  article blockquote {
+    @apply my-6 pl-4 border-l-4 border-blue-500 italic text-gray-600;
+  }
+
+  article a {
+    @apply text-blue-600 hover:text-blue-800 underline decoration-2 underline-offset-2 transition-colors;
+  }
+
+  /* Custom utilities */
+  .gradient-text {
+    @apply bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent;
+  }
+
+  .card-hover {
+    @apply transition-all duration-300 hover:-translate-y-1 hover:shadow-xl;
+  }
+}
