@@ -19,57 +19,84 @@ const formattedDate = new Intl.DateTimeFormat('es-ES', {
 ---
 
 <Layout title={`${title} | Kevin PM`} description={description}>
-  <article class="max-w-3xl mx-auto px-6 py-16">
+
+  <div class="max-w-3xl mx-auto px-6 pt-10">
+    <a href={import.meta.env.BASE_URL} class="inline-flex items-center gap-1.5 text-sm text-gray-400 hover:text-gray-700 transition-colors">
+      ← Todos los artículos
+    </a>
+  </div>
+
+  <article class="max-w-3xl mx-auto px-6 pt-10 pb-24">
+
     <!-- Header -->
-    <header class="mb-12">
-      <div class="flex items-center gap-4 text-sm text-gray-600 mb-6">
-        <time datetime={pubDate.toISOString()}>
-          {formattedDate}
-        </time>
-        <span>·</span>
-        <span>{readingTime} lectura</span>
-      </div>
-      
-      <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6 leading-tight">
-        {title}
-      </h1>
-      
-      <p class="text-xl text-gray-600 leading-relaxed">
-        {description}
-      </p>
+    <header class="mb-14 pb-14 border-b border-gray-100">
 
       {tags.length > 0 && (
-        <div class="flex flex-wrap gap-2 mt-6">
+        <div class="flex flex-wrap gap-2 mb-6">
           {tags.map((tag) => (
-            <span class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-sm font-medium">
+            <span class="px-3 py-1 bg-blue-50 text-blue-600 rounded-full text-xs font-semibold uppercase tracking-wider">
               {tag}
             </span>
           ))}
         </div>
       )}
+
+      <h1 class="text-4xl md:text-5xl font-bold tracking-tight leading-[1.15] mb-6 text-gray-900">
+        {title}
+      </h1>
+
+      <p class="text-xl text-gray-500 leading-relaxed mb-8">
+        {description}
+      </p>
+
+      <div class="flex items-center gap-3 text-sm text-gray-400">
+        <time datetime={pubDate.toISOString()} class="font-medium text-gray-500">
+          {formattedDate}
+        </time>
+        <span>·</span>
+        <span>{readingTime} de lectura</span>
+      </div>
     </header>
 
     <!-- Content -->
-    <div class="prose prose-lg prose-slate max-w-none">
+    <div class="
+      prose max-w-none
+      prose-p:text-gray-700 prose-p:leading-8 prose-p:text-[1.0625rem]
+      prose-headings:font-bold prose-headings:tracking-tight prose-headings:text-gray-900
+      prose-h2:text-2xl prose-h2:mt-14 prose-h2:mb-5 prose-h2:pb-3 prose-h2:border-b prose-h2:border-gray-100
+      prose-h3:text-xl prose-h3:mt-10 prose-h3:mb-4
+      prose-h4:text-lg prose-h4:mt-8 prose-h4:mb-3
+      prose-strong:text-gray-900 prose-strong:font-semibold
+      prose-a:text-blue-600 prose-a:font-medium prose-a:no-underline hover:prose-a:underline
+      prose-blockquote:border-l-[3px] prose-blockquote:border-blue-500 prose-blockquote:bg-blue-50 prose-blockquote:rounded-r-xl prose-blockquote:px-6 prose-blockquote:py-4 prose-blockquote:not-italic prose-blockquote:text-gray-700
+      prose-ul:space-y-1 prose-ol:space-y-1
+      prose-li:text-gray-700 prose-li:leading-7
+      prose-code:bg-gray-100 prose-code:text-gray-800 prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded prose-code:text-sm prose-code:font-normal prose-code:before:content-none prose-code:after:content-none
+      prose-pre:bg-gray-900 prose-pre:rounded-xl
+      prose-hr:border-gray-200 prose-hr:my-12
+      prose-img:rounded-xl
+    ">
       <slot />
     </div>
 
     <!-- Footer CTA -->
-    <div class="mt-16 pt-8 border-t border-gray-200">
-      <div class="bg-gradient-to-r from-blue-50 to-purple-50 rounded-2xl p-8">
-        <h3 class="text-2xl font-bold mb-4">¿Te ha resultado útil?</h3>
-        <p class="text-gray-700 mb-6">
-          Comparte este artículo en LinkedIn o sígueme para más contenido sobre producto, IA y automatización.
+    <div class="mt-20 pt-10 border-t border-gray-100">
+      <div class="bg-gradient-to-br from-blue-50 to-purple-50 rounded-2xl p-8 md:p-10">
+        <p class="text-xs font-semibold uppercase tracking-widest text-blue-600 mb-3">¿Te ha resultado útil?</p>
+        <h3 class="text-2xl font-bold mb-3 text-gray-900">Sígueme en LinkedIn</h3>
+        <p class="text-gray-600 mb-6 leading-relaxed">
+          Publico sobre producto, IA y automatización. Si este artículo te aportó algo, conectemos.
         </p>
-        <a 
+        <a
           href="https://www.linkedin.com/in/kevinriosmerino/"
-          target="_blank" 
+          target="_blank"
           rel="noopener"
           class="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 transition-colors"
         >
-          Sígueme en LinkedIn →
+          Conecta en LinkedIn →
         </a>
       </div>
     </div>
+
   </article>
 </Layout>

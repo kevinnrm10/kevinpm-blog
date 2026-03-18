@@ -12,9 +12,9 @@ Estamos en 2026 y parece que si no tienes IA en tu producto, tu startup está mu
 
 Pero hay un problema: **nadie habla de cuándo NO tiene sentido.**
 
-## El caso real: Housfy y las citas automatizadas
+## El caso real: IA en gestión de citas
 
-Déjame contarte lo que pasó en Housfy. Implementamos IA para automatizar la gestión de citas inmobiliarias. El resultado en números: absorbimos aproximadamente **1 FTE** de trabajo repetitivo. Suena bien, ¿no?
+Déjame contarte un caso real. Implementamos IA para automatizar la gestión de citas inmobiliarias. El resultado en números: absorbimos aproximadamente **1 FTE** de trabajo repetitivo. Suena bien, ¿no?
 
 Pero la historia completa es más matizada.
 
@@ -24,7 +24,7 @@ Descubrimos que ciertos leads, especialmente los de alto valor, necesitan el toq
 
 ## Cuándo SÍ tiene sentido aplicar IA
 
-Después de implementar varios proyectos de IA en Housfy y analizar docenas de casos, he identificado cuatro criterios claros:
+Después de implementar varios proyectos de IA y analizar docenas de casos, he identificado cuatro criterios claros:
 
 ### 1. Volumen masivo de tareas repetitivas
 
@@ -127,7 +127,7 @@ Es tecnología en busca de un problema, no al revés. Y esto genera:
 
 ## El framework que uso para decidir
 
-Cuando alguien en Housfy propone usar IA para algo, uso este checklist:
+Cuando alguien en mi equipo propone usar IA para algo, uso este checklist:
 
 ### 1. ¿Existe el problema?
 - ¿Cuántas veces ocurre?
@@ -178,7 +178,7 @@ Esto es especialmente terrible para empresas pequeñas. El copy es tu voz de mar
 
 ## La IA no es estrategia. Es una herramienta.
 
-Esta es la frase que repito hasta el cansancio en Housfy:
+Esta es la frase que repito hasta el cansancio:
 
 > **La pregunta no es "¿tenemos IA?" sino "¿resuelve este problema específico mejor/más rápido/más barato que las alternativas?"**
 
@@ -190,13 +190,13 @@ A veces eso es IA. A veces es una regla de negocio. A veces es mejor UX. A veces
 
 **Éxito: Clasificación de citas**
 
-En Housfy, automatizar la clasificación y asignación de citas ha sido un win claro. Alto volumen (cientos/día), lógica predecible, bajo coste de error. La IA lo hace en segundos, el equipo se enfoca en casos complejos.
+Automatizar la clasificación y asignación de citas fue un win claro. Alto volumen (cientos/día), lógica predecible, bajo coste de error. La IA lo hace en segundos, el equipo se enfoca en casos complejos.
 
 **Fracaso: Generación automática de descripciones de propiedades**
 
 Intentamos usar IA para generar descripciones de propiedades automáticamente. En papel sonaba genial: miles de propiedades, descripciones repetitivas, ahorraríamos horas.
 
-En práctica: Las descripciones generadas eran genéricas y sin personalidad. Los agentes preferían escribirlas ellos porque conocían los detalles únicos de cada propiedad. El ahorro de tiempo no justificaba la pérdida de calidad.
+En práctica: Las descripciones generadas eran genéricas y sin personalidad. El equipo prefería escribirlas ellos porque conocían los detalles únicos de cada propiedad. El ahorro de tiempo no justificaba la pérdida de calidad.
 
 **Aprendizaje:** A veces el "trabajo repetitivo" no es tan repetitivo como crees.
 
@@ -210,7 +210,7 @@ Estas son mis reflexiones después de 2 años trabajando con IA en producto. Per
 - ¿Qué caso de uso te sorprendió porque funcionó mejor de lo esperado?
 - ¿En qué problema estás considerando IA ahora mismo?
 
-Me encantaría escuchar tu experiencia. Déjame un comentario en el [post de LinkedIn](https://www.linkedin.com/in/kevinnrm10/) o escríbeme directamente.
+Me encantaría escuchar tu experiencia. Déjame un comentario en el [post de LinkedIn](https://www.linkedin.com/in/kevinriosmerino/) o escríbeme directamente.
 
 ---
 
