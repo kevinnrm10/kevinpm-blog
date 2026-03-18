@@ -1,217 +1,162 @@
 ---
 title: "IA: Cuándo SÍ y cuándo NO aplicarla en tu producto"
-description: "Todos hablan de adoptar IA o morir. Pero nadie habla de los casos donde implementar IA es matar moscas a cañonazos. Una guía práctica desde las trincheras."
+description: "Soy fan de la IA y creo que es el futuro. Precisamente por eso me preocupa cómo se está vendiendo. Una guía práctica para implementarla con criterio."
 pubDate: 2026-03-19
 readingTime: "8 min"
 tags: ["IA", "Product Management", "Automatización"]
 ---
 
-La pregunta que nadie hace sobre IA: **¿Y si NO la necesitas?**
+Abro LinkedIn y en los primeros tres posts ya encuentro: "La IA va a reemplazar a todos los PMs", "Implementa un agente de IA en 5 pasos" y alguien mostrando un workflow que hace 40 cosas a la vez como si eso fuera un producto.
 
-Estamos en 2026 y parece que si no tienes IA en tu producto, tu startup está muerta. LinkedIn está lleno de posts sobre "la revolución de la IA", inversores preguntando por tu "estrategia de AI", y consultoras vendiendo transformaciones digitales con IA como ingrediente mágico.
+Entiendo el entusiasmo. De verdad. Yo soy el primero en experimentar con IA, llevo tres años trabajando con ella y el último año implementando soluciones reales. Creo que es la tecnología más transformadora que he visto en mis seis años haciendo producto digital.
 
-Pero hay un problema: **nadie habla de cuándo NO tiene sentido.**
+Y precisamente por eso me preocupa cómo se está vendiendo.
 
-## El caso real: IA en gestión de citas
+**Porque cuando todo es IA, nada es IA.** Y las implementaciones que nacen del hype en lugar del problema acaban siendo teatro corporativo: caras, difíciles de mantener, y con un impacto que nadie sabe cómo medir.
 
-Déjame contarte un caso real. Implementamos IA para automatizar la gestión de citas inmobiliarias. El resultado en números: absorbimos aproximadamente **1 FTE** de trabajo repetitivo. Suena bien, ¿no?
-
-Pero la historia completa es más matizada.
-
-Descubrimos que ciertos leads, especialmente los de alto valor, necesitan el toque humano para convertir. La IA es brillante gestionando el flujo estándar, pero cuando aparece un caso edge (un cliente corporativo, una situación compleja, una propiedad única), el sistema necesita intervención humana.
-
-**La lección:** La IA no reemplazó por completo el trabajo humano. Lo complementó, absorbiendo lo repetitivo y dejando que el equipo se enfocara en lo que realmente importa: los casos complejos que generan más valor.
+Este artículo no es una crítica a la IA. Es una guía para implementarla bien.
 
 ## Cuándo SÍ tiene sentido aplicar IA
 
-Después de implementar varios proyectos de IA y analizar docenas de casos, he identificado cuatro criterios claros:
+Después de analizar docenas de proyectos, hay cuatro situaciones donde la IA no solo tiene sentido — es la mejor herramienta disponible.
 
 ### 1. Volumen masivo de tareas repetitivas
 
-Si procesas **más de 1000 solicitudes al día** con lógica similar, la IA tiene sentido económico. Ejemplos:
+Si procesas **más de 1.000 solicitudes al día** con lógica similar, la IA tiene sentido económico claro. Ejemplos:
 
 - Clasificación de emails de atención al cliente
 - Moderación de contenido generado por usuarios
 - Transcripción de llamadas comerciales
 - Extracción de datos de documentos estandarizados
 
-**Por qué funciona:** El coste marginal de cada predicción es ínfimo. Con volumen alto, el ROI es obvio.
+El coste marginal de cada predicción es ínfimo. Con volumen alto, el ROI se justifica solo.
 
-### 2. Análisis de patrones que un humano tardaría semanas
+Un buen ejemplo de esto es lo que el equipo de Operaciones, Producto y Tech de mi empresa construyó para la agendación de visitas inmobiliarias. El resultado: absorbieron aproximadamente **1 FTE** de trabajo repetitivo. La IA gestiona el flujo estándar, y el equipo humano se enfoca en los casos que realmente necesitan criterio — clientes complejos, situaciones excepcionales, casos de alto valor.
 
-La IA brilla cuando necesitas encontrar patrones en datasets masivos:
+No reemplazó el trabajo humano. Lo complementó donde tenía sentido hacerlo.
+
+### 2. Patrones que un humano tardaría semanas en encontrar
+
+La IA brilla cuando necesitas procesar datasets masivos para encontrar señales que no son visibles a simple vista:
 
 - Detección de fraude en transacciones
-- Segmentación avanzada de usuarios
-- Predicción de churn basada en comportamiento
-- Análisis de sentiment en miles de reviews
+- Segmentación avanzada de comportamiento de usuario
+- Predicción de churn basada en múltiples variables
+- Análisis de sentiment a escala
 
-**Por qué funciona:** La velocidad de análisis justifica la inversión. Un humano podría encontrar los mismos insights, pero en 3 meses en lugar de 3 horas.
+Un humano podría llegar a los mismos insights. Pero en semanas, no en horas. Esa velocidad tiene un valor enorme.
 
 ### 3. El coste de error es bajo y la velocidad importa más que la perfección
 
-Si un error ocasional es tolerable y la velocidad es crítica:
+Hay contextos donde no necesitas un 99,9% de accuracy. Con un 85-90% ya generas valor, y el usuario tolera errores ocasionales:
 
-- Recomendaciones de productos (si falla una, hay 10 más)
+- Recomendaciones de productos
 - Sugerencias de búsqueda
 - Autocomplete inteligente
-- Chatbots de primera línea (con escalado a humano)
+- Chatbots de primera línea con escalado a humano
 
-**Por qué funciona:** No necesitas 99.9% de accuracy. Con 85-90% ya generas valor, y el usuario tolera errores ocasionales.
+La clave está en entender qué coste tiene equivocarse. Si es bajo, la velocidad de la IA lo compensa con creces.
 
-### 4. Tienes datos limpios, estructurados y SUFICIENTES
+### 4. Tienes datos limpios, estructurados y suficientes
 
-Este es el requisito olvidado. La IA necesita combustible de calidad:
+Este es el requisito que más se ignora. La IA necesita combustible de calidad:
 
 - Datos consistentemente etiquetados
-- Suficiente volumen (mínimo cientos de ejemplos, idealmente miles)
+- Volumen suficiente (mínimo cientos de ejemplos, idealmente miles)
 - Distribución representativa de casos reales
-- Pipeline de datos confiable
+- Un pipeline de datos confiable
 
-**Por qué funciona:** Garbage in, garbage out. Sin buenos datos, hasta el mejor modelo falla.
+*Garbage in, garbage out.* Sin buenos datos, hasta el mejor modelo falla. Antes de pensar en el modelo, piensa en tus datos.
 
-## Cuándo es una TRAMPA invertir en IA
+## Cuándo NO es la mejor solución
 
-Aquí es donde me pongo polémico. He visto docenas de implementaciones de IA que fueron puro teatro corporativo. Estos son los red flags:
+Aquí es donde se separa implementar IA de implementarla bien.
 
-### 1. Tu proceso tiene 20 casos edge que requieren criterio humano
+### 1. Tu proceso tiene demasiados casos edge
 
-Si tu workflow tiene muchas excepciones que necesitan juicio contextual, la IA va a fallar constantemente. 
+Si tu workflow tiene muchas excepciones que necesitan juicio contextual, la IA va a tener dificultades constantes.
 
-**Ejemplo real:** Una empresa intentó automatizar la aprobación de créditos inmobiliarios. El problema: cada caso tenía matices únicos (ingresos irregulares, situaciones familiares complejas, garantías no estándar). La IA rechazaba casos válidos o aprobaba casos de riesgo. Solución final: vuelta al proceso manual con pequeñas ayudas de IA para scoring básico.
+Un caso clásico: automatizar la aprobación de créditos con muchos matices únicos — ingresos irregulares, situaciones familiares complejas, garantías no estándar. La IA puede ayudar con el scoring básico, pero el criterio humano sigue siendo crítico en los casos que más importan.
 
-**La realidad:** Si el criterio humano es crítico, no intentes reemplazarlo. Potéñcialo con herramientas, pero no lo elimines.
+Cuando el juicio contextual es el núcleo del proceso, no intentes reemplazarlo. Potéñcialo con herramientas.
 
-### 2. No tienes forma de medir si la IA lo hace mejor que tu equipo actual
+### 2. No tienes forma de medir si la IA lo hace mejor
 
-Vi esto en una consultora que implementó IA para "mejorar la calidad de propuestas comerciales". No tenían métrica de qué era "calidad". No tenían baseline del equipo actual. No podían medir el impacto.
+Si no puedes responder "¿cómo sabremos si funciona?" antes de empezar, no empieces.
 
-**La pregunta crítica:** ¿Cómo sabrás si funciona? Si no puedes responder esto ANTES de implementar, no empieces.
+He visto proyectos de IA lanzarse sin baseline, sin métrica objetivo, sin forma de comparar el antes y el después. El resultado inevitable: "tenemos IA en producción" como vanity metric, sin saber si generó valor real.
 
-### 3. La implementación cuesta 6 meses y 50K€ para automatizar algo que ocurre 3 veces al mes
+**La pregunta crítica es anterior al modelo:** ¿Qué medimos hoy? ¿Qué queremos mejorar? ¿Cuánto?
 
-El análisis de ROI más ignorado del mundo tech.
+### 3. El ROI no tiene sentido
 
-**Cálculo simple:**
-- Coste de desarrollo: 50K€
-- Coste de mantenimiento: 10K€/año
-- Ahorro: 2 horas/mes × 12 meses = 24 horas/año
-- A 50€/hora = 1,200€/año de ahorro
+El análisis de rentabilidad más ignorado del mundo tech.
 
-**Break-even: 42 años.** No tiene sentido.
+Un ejemplo real que se repite constantemente:
 
-Sin embargo, veo este patrón constantemente. Equipos técnicos emocionados por resolver un problema "con IA" sin preguntarse si el problema justifica la solución.
+- Coste de desarrollo: 50.000€
+- Coste de mantenimiento anual: 10.000€
+- Ahorro generado: 2 horas/mes × 12 = 24 horas/año
+- A 50€/hora → 1.200€/año
 
-### 4. Tus datos son un caos y necesitas 3 meses de limpieza primero
+**Break-even: 42 años.**
 
-Esto es más común de lo que crees:
+Antes de implementar, haz el cálculo. Si el break-even supera los dos años, probablemente hay una solución más simple y más barata.
 
-- Eventos mal trackeados desde hace 2 años
-- Campos inconsistentes en la base de datos
+### 4. Tus datos son un caos
+
+Más común de lo que parece:
+
+- Eventos mal trackeados desde hace años
+- Campos inconsistentes en base de datos
 - Datos duplicados sin proceso de deduplicación
 - Sin etiquetado de ground truth
 
-**La realidad brutal:** Si tus datos son un desastre, la IA los va a amplificar. Primero limpia, luego entrena.
+Si tus datos son un desastre, la IA los va a amplificar. La solución no es un modelo más potente — es arreglar primero la base.
 
-## La paradoja del producto/AI
+## El problema sistémico
 
-Aquí está el problema sistémico que veo una y otra vez:
+Lo que veo una y otra vez es tecnología en busca de un problema, no al revés.
 
-**Las empresas invierten en IA para "ser innovadoras" sin preguntarse si resuelve un problema real.**
+Las empresas invierten en IA para "ser innovadoras" sin preguntarse si resuelve algo concreto. Y eso genera tres patrones conocidos:
 
-Es tecnología en busca de un problema, no al revés. Y esto genera:
+- **Sunk cost fallacy:** "Ya invertimos seis meses, tenemos que lanzarlo."
+- **Vanity metrics:** "Tenemos IA en producción." (Aunque nadie la use con impacto medible.)
+- **Complejidad innecesaria:** Sistemas que requieren un equipo dedicado a mantener algo que un script de Python haría igual de bien.
 
-- **Sunk cost fallacy:** "Ya invertimos 6 meses, tenemos que lanzarlo"
-- **Vanity metrics:** "Tenemos IA en producción" (aunque nadie la use)
-- **Complejidad innecesaria:** Sistemas que requieren un equipo dedicado a mantener algo que un script de Python haría igual de bien
+## El checklist que uso para decidir
 
-## El framework que uso para decidir
+Cuando alguien propone usar IA para algo, hago cinco preguntas en este orden:
 
-Cuando alguien en mi equipo propone usar IA para algo, uso este checklist:
+**1. ¿El problema existe de verdad?**
+¿Cuántas veces ocurre? ¿Qué coste tiene no resolverlo? ¿Los usuarios realmente lo sufren?
 
-### 1. ¿Existe el problema?
-- ¿Cuántas veces ocurre?
-- ¿Qué coste tiene no resolverlo?
-- ¿Los usuarios realmente lo sufren?
+**2. ¿IA es la mejor solución disponible?**
+¿Una regla de negocio simple lo resolvería? ¿Un mejor UX eliminaría el problema? ¿Una automatización sin ML sería suficiente?
 
-### 2. ¿IA es la mejor solución?
-- ¿Una regla de negocio simple lo resolvería?
-- ¿Un mejor UX eliminaría el problema?
-- ¿Una automatización sin ML sería suficiente?
+**3. ¿Tenemos los recursos para hacerlo bien?**
+¿Datos de calidad suficientes? ¿Capacidad de mantenerlo en el tiempo? ¿Expertise técnico en el equipo?
 
-### 3. ¿Tenemos los recursos?
-- ¿Datos de calidad suficientes?
-- ¿Capacidad de mantenerlo en el tiempo?
-- ¿Expertise técnico en el equipo?
+**4. ¿Podemos medir el éxito?**
+¿Qué métrica mejorará? ¿Cuál es el baseline actual? ¿Cómo sabremos si funciona mejor que antes?
 
-### 4. ¿Podemos medir el éxito?
-- ¿Qué métrica mejorará?
-- ¿Cuál es el baseline actual?
-- ¿Cómo sabremos si funciona mejor que antes?
+**5. ¿El ROI tiene sentido en menos de dos años?**
+Coste de desarrollo + mantenimiento anual, versus valor generado en tiempo, ingresos o mejora de experiencia.
 
-### 5. ¿El ROI tiene sentido?
-- Coste de desarrollo + mantenimiento anual
-- vs Valor generado (tiempo ahorrado, ingresos, mejor UX)
-- Break-even en menos de 2 años
+Si tres o más respuestas son "no" o "no sé", el momento de implementar IA aún no ha llegado. No porque la IA no funcione — sino porque el problema no está suficientemente definido todavía.
 
-**Si 3 o más respuestas son "no" o "no sé", no uses IA todavía.**
+## La IA es el futuro. Implementarla bien, también.
 
-## Casos donde NO deberías usar IA (pero todos lo hacen)
+No tengo dudas de que la IA va a transformar cómo se hace producto. Ya lo está haciendo.
 
-Algunos ejemplos polémicos:
+Pero hay una diferencia enorme entre implementar IA y hacerlo con criterio. La primera está al alcance de cualquiera con una tarjeta de crédito y acceso a una API. La segunda requiere entender el problema, los datos, el coste y el impacto antes de escribir una sola línea de código.
 
-**1. Chatbots de atención al cliente en productos nicho**
+El hype va a seguir. Los posts de LinkedIn también.
 
-Si tienes 50 consultas/mes de un producto especializado donde cada caso es único, un chatbot va a frustrar a tus usuarios. Es mejor un email que llega a un humano que sabe.
+La pregunta relevante no es "¿estamos usando IA?". Es **"¿estamos resolviendo el problema correcto, de la forma correcta, para las personas correctas?"**
 
-**2. "Recomendaciones personalizadas" con 100 usuarios**
-
-Con poco tráfico, una buena curación manual o reglas simples funcionan mejor. La IA necesita datos de comportamiento para aprender, y con 100 usuarios no tienes suficientes.
-
-**3. Clasificación automática de leads cuando tu equipo de sales es de 3 personas**
-
-Tres personas pueden revisar manualmente todos los leads del día. No necesitas un modelo de ML que te costará mantener y que probablemente se equivoque en edge cases valiosos.
-
-**4. "IA para escribir mejor copy"**
-
-Esto es especialmente terrible para empresas pequeñas. El copy es tu voz de marca. Delegarlo a IA genera texto genérico que no conecta. Vale más un copywriter junior que entiende tu producto que Claude escribiendo landing pages.
-
-## La IA no es estrategia. Es una herramienta.
-
-Esta es la frase que repito hasta el cansancio:
-
-> **La pregunta no es "¿tenemos IA?" sino "¿resuelve este problema específico mejor/más rápido/más barato que las alternativas?"**
-
-Porque al final del día, tu trabajo como PM no es implementar tecnología cool. Es resolver problemas de usuarios de la forma más efectiva posible.
-
-A veces eso es IA. A veces es una regla de negocio. A veces es mejor UX. A veces es simplemente contratar una persona más.
-
-## Mi experiencia personal: Éxitos y fracasos
-
-**Éxito: Clasificación de citas**
-
-Automatizar la clasificación y asignación de citas fue un win claro. Alto volumen (cientos/día), lógica predecible, bajo coste de error. La IA lo hace en segundos, el equipo se enfoca en casos complejos.
-
-**Fracaso: Generación automática de descripciones de propiedades**
-
-Intentamos usar IA para generar descripciones de propiedades automáticamente. En papel sonaba genial: miles de propiedades, descripciones repetitivas, ahorraríamos horas.
-
-En práctica: Las descripciones generadas eran genéricas y sin personalidad. El equipo prefería escribirlas ellos porque conocían los detalles únicos de cada propiedad. El ahorro de tiempo no justificaba la pérdida de calidad.
-
-**Aprendizaje:** A veces el "trabajo repetitivo" no es tan repetitivo como crees.
-
-## ¿Qué opinas?
-
-Estas son mis reflexiones después de 2 años trabajando con IA en producto. Pero la conversación no termina aquí.
-
-**Preguntas para ti:**
-
-- ¿Dónde has visto implementaciones de IA que eran puro teatro?
-- ¿Qué caso de uso te sorprendió porque funcionó mejor de lo esperado?
-- ¿En qué problema estás considerando IA ahora mismo?
-
-Me encantaría escuchar tu experiencia. Déjame un comentario en el [post de LinkedIn](https://www.linkedin.com/in/kevinriosmerino/) o escríbeme directamente.
+A veces eso es IA. A veces es una regla de negocio. A veces es mejor UX. Y a veces es simplemente tomarse el tiempo de entender bien el problema antes de buscar la solución.
 
 ---
 
-**P.D.:** Si este artículo te resultó útil, compártelo con tu equipo de producto. La mejor forma de evitar las trampas de la IA es tener conversaciones honestas sobre cuándo realmente la necesitamos.
+*¿Estás evaluando si aplicar IA en algún proyecto ahora mismo? Cuéntame en [LinkedIn](https://www.linkedin.com/in/kevinriosmerino/) — me interesa el contexto.*
